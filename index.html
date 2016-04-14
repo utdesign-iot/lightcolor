@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<link href="styles.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery.js"></script>
+
+
+<h1>Light Controller</h1>
+
+<h2 id ='door'>Light is Off</h2>
+
+<center><img id="myImage" onclick="toggleImage()" src="lightoff.png" > </center>
+
+<center><input class="bulb" id="red" type="submit" value="Red" onclick="redColor()"/> </center>
+
+
+<script>
+var image = document.getElementById('myImage');
+var bulbColor = "red"; 
+var status;
+    
+function toggleImage() {
+     
+    if (image.src.match("lightoff")) {
+
+
+		status = "Light is On" ;
+
+        if(bulbColor ="yellow")
+            image.src = "lightonyellow.png";
+        else if (bulbColor = "red")
+            image.src = "lightsonred.png";
+
+        else if (bulbColor = "green")
+            image.src = "lightsongreen.png"
+
+        else if (bulbColor = "blue")
+            image.src = "lightsonblue.png"
+
+        console.log(bulbColor);
+
+        $.ajax({url: "https://maker.ifttt.com/trigger/toggle_light/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
+
+
+
+    } else  {
+        image.src = "lightoff.png";
+    	status = "Light is Off";
+    }
+	document.getElementById('door').innerHTML = status;
+}
+
+function yellowColor() {
+    bulbColor = "yellow" ;
+}
+
+function redColor() {
+    status = "Light is On";
+    bulbColor = "red"
+    image.src = "lightsonred.png";
+    console.log(bulbColor);
+}
+
+function greenColor(){
+    bulbColor = "green" ;
+}
+
+function blueColor() {
+    bulbColor = "blue" ;
+}
+
+</script>
+	
+
+
+
+</body>
+</html>
