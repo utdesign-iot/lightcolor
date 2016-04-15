@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Smart Light</title>
-    	<meta name="description" content="Toggle light on and off"/>
-</head>
 <body>
 
 <link href="styles.css" rel="stylesheet">
@@ -12,24 +8,27 @@
 
 <h1>Light Controller</h1>
 
-<h2 id ='door'>Light is Off</h2>
-
 <center><img id="myImage" onclick="toggleImage()" src="lightoff.png" > </center>
 
-<center><input class="bulb" id="red" type="submit" value="Red" onclick="redColor()"/> </center>
 
+<input class="bulb" id="red" type="submit" value="Red" onclick="redColor()"/> 
+<div align = "center"><input class="bulb" id="green" type="submit" value="Green" onclick="greenColor()"/> </div>
+<div align = "right"><input class="bulb" id="blue" type="submit" value="Blue" onclick="blueColor()"/> </div>
 
 <script>
 var image = document.getElementById('myImage');
 var bulbColor = "red"; 
-var status;
+</script>
+
+<script>
     
 function toggleImage() {
      
+     $.ajax({url: "https://maker.ifttt.com/trigger/toggle_light/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
+     
     if (image.src.match("lightoff")) {
-
-
-		status = "Light is On" ;
 
         if(bulbColor ="yellow")
             image.src = "lightsonyellow.png";
@@ -42,19 +41,14 @@ function toggleImage() {
         else if (bulbColor = "blue")
             image.src = "lightsonblue.png"
 
-        console.log(bulbColor);
 
-        $.ajax({url: "https://maker.ifttt.com/trigger/toggle_light/with/key/du5zwwbbpFzqIJZiQrJkyP", 
-            success: function (result) {
-                    console.log("success")}});
+       
 
 
 
     } else  {
         image.src = "lightoff.png";
-    	status = "Light is Off";
     }
-	document.getElementById('door').innerHTML = status;
 }
 
 function yellowColor() {
@@ -66,14 +60,32 @@ function redColor() {
     bulbColor = "red"
     image.src = "lightsonred.png";
     console.log(bulbColor);
+
+     $.ajax({url: "https://maker.ifttt.com/trigger/turn_light_red/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
 }
 
 function greenColor(){
     bulbColor = "green" ;
+    console.log('green');
+    image.src = "lightsongreen.png"
+
+
+$.ajax({url: "https://maker.ifttt.com/trigger/turn_light_green/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
 }
 
 function blueColor() {
     bulbColor = "blue" ;
+    console.log("blue");
+    image.src = "lightsonblue.png";
+
+    $.ajax({url: "https://maker.ifttt.com/trigger/turn_light_blue/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
+
 }
 
 </script>
