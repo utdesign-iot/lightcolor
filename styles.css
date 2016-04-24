@@ -1,85 +1,120 @@
-@font-face {
-    font-style: normal;
-    font-weight: normal;
-}
-body {
-    
-    max-height: 100px;
-    -webkit-text-size-adjust:100%;
-}
-h1 {
-   font-family: "Arial";
-   text-align: center;
-}	
+    @font-face {
+        font-style: normal;
+        font-weight: normal;
+    }
+    body {
+        
+        max-height: 100px;
+        -webkit-text-size-adjust:100%;
+    }
+    h1 {
+       font-family: "Arial";
+       text-align: center;
+    }	
 
-h2 {
-   font-family: "Arial";
-   text-align: center;
-}
+    h2 {
+       font-family: "Arial";
+       text-align: center;
+    }
 
-h1, h2, h3, h4, h5, h6{
-  line-height: 60px; 
-}
+    h1, h2, h3, h4, h5, h6{
+      line-height: 60px; 
+    }
 
-
-
-input#red{
-    width:100px; /*same as the height*/
-    height:100px; /*same as the width*/
-    position: absolute;
-	margin: auto;
-    background-color:#ff0000;
-    border:1px solid #ff0000; /*same colour as the background*/
-    color:#fff;
-    font-size:1.6em;
-    /*set the border-radius at half the size of the width and height*/
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    /*give the button a small drop shadow*/
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
-}
-/***NOW STYLE THE BUTTON'S HOVER STATE***/
+input#yellow{
+        width:100px; /*same as the height*/
+        height:100px; /*same as the width*/
+        position: absolute;
+        background-color:#ffff00;
+        border:1px solid #ffff00; /*same colour as the background*/
+            font-size:1.6em;
+        /*set the border-radius at half the size of the width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        /*give the button a small drop shadow*/
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+        margin-left: 7cm;
 
 
-input#blue{
-    width:100px; /*same as the height*/
-    height:100px; /*same as the width*/
-    position: absolute;
-    margin: auto;
-    background-color:#0033cc;
-    border:1px solid #0033cc; /*same colour as the background*/
-    color:#fff;
-    font-size:1.6em;
-    /*set the border-radius at half the size of the width and height*/
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    /*give the button a small drop shadow*/
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
 
-}
 
-input#green {
-    width:100px; /*same as the height*/
-    height:100px; /*same as the width*/
-    position: absolute;
-    margin: auto;
-    background-color:#00cc33;
-    border:1px solid #00cc33; /*same colour as the background*/
-    color:#fff;
-    font-size:1.6em;
-    /*set the border-radius at half the size of the width and height*/
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    /*give the button a small drop shadow*/
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
-    box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+    }
+
+
+    input#red{
+        width:100px; /*same as the height*/
+        height:100px; /*same as the width*/
+        position: absolute;
+        background-color:#ff0000;
+        border:1px solid #ff0000; /*same colour as the background*/
+        color:#fff;
+        font-size:1.6em;
+        /*set the border-radius at half the size of the width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        /*give the button a small drop shadow*/
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+        margin-left: 10cm;
+
+
+
+
+    }
+    /***NOW STYLE THE BUTTON'S HOVER STATE***/
+
+
+    input#blue{
+        width:100px; /*same as the height*/
+        height:100px; /*same as the width*/
+        position: absolute;
+        background-color:#0033cc;
+        border:1px solid #0033cc; /*same colour as the background*/
+        color:#fff;
+        font-size:1.6em;
+        /*set the border-radius at half the size of the width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        /*give the button a small drop shadow*/
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+
+        margin-left: 13.5cm;
+
+
+
+    }
+
+    input#green {
+        width:100px; /*same as the height*/
+        height:100px; /*same as the width*/
+        position: absolute;
+        background-color:#00cc33;
+        border:1px solid #00cc33; /*same colour as the background*/
+        color:#fff;
+        font-size:1.6em;
+        /*set the border-radius at half the size of the width and height*/
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        border-radius: 100px;
+        /*give the button a small drop shadow*/
+        -webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+        box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+
+        margin-left: 16.5cm;
+
+
+    }
+
+.wrapper {
+  padding-right: 2.5cm;
 }
 
