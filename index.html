@@ -11,13 +11,16 @@
 <center><img id="myImage" onclick="toggleImage()" src="lightoff.png" > </center>
 
 
-<input class="bulb" id="red" type="submit" value="Red" onclick="redColor()"/> 
-<div align = "center"><input class="bulb" id="green" type="submit" value="Green" onclick="greenColor()"/> </div>
-<div align = "right"><input class="bulb" id="blue" type="submit" value="Blue" onclick="blueColor()"/> </div>
-
+<div class = "wrapper">
+        <input class="bulb" id="yellow" type="submit" value="Yellow" onclick="yellowColor()"/> 
+        <input class="bulb" id="red" type="submit" value="Red" onclick="redColor()"/> 
+        <input class="bulb" id="green" type="submit" value="Green" onclick="greenColor()"/> 
+        <input class="bulb" id="blue" type="submit" value="Blue" onclick="blueColor()"/> 
+</div>
+      
 <script>
 var image = document.getElementById('myImage');
-var bulbColor = "red"; 
+var bulbColor = "yellow"; 
 </script>
 
 <script>
@@ -27,24 +30,31 @@ function toggleImage() {
      $.ajax({url: "https://maker.ifttt.com/trigger/toggle_light/with/key/du5zwwbbpFzqIJZiQrJkyP", 
             success: function (result) {
                     console.log("success")}});
-     
+
     if (image.src.match("lightoff")) {
-
-        if(bulbColor ="yellow")
-            image.src = "lightsonyellow.png";
-        else if (bulbColor = "red")
+        console.log(bulbColor)
+        
+         if (bulbColor == "red") {
+            console.log("the bulb is now red")
             image.src = "lightsonred.png";
+        }
 
-        else if (bulbColor = "green")
+         else if (bulbColor == "green") {
             image.src = "lightsongreen.png"
-
-        else if (bulbColor = "blue")
-            image.src = "lightsonblue.png"
+         }
 
 
-       
+        else if(bulbColor =="yellow") {
+            image.src = "lightsonyellow.png";
+        }
+
+         else if (bulbColor == "blue") {
+             image.src = "lightsonblue.png"
+         }
 
 
+
+    
 
     } else  {
         image.src = "lightoff.png";
@@ -53,6 +63,11 @@ function toggleImage() {
 
 function yellowColor() {
     bulbColor = "yellow" ;
+
+     $.ajax({url: "ttps://maker.ifttt.com/trigger/turn_light_green/with/key/du5zwwbbpFzqIJZiQrJkyP", 
+            success: function (result) {
+                    console.log("success")}});
+
 }
 
 function redColor() {
@@ -86,6 +101,12 @@ function blueColor() {
             success: function (result) {
                     console.log("success")}});
 
+}
+
+function yellowColor () {
+    bulbColor = "yellow" ;
+    console.log("yellow");
+    image.src = "lightsonyellow.png"
 }
 
 </script>
